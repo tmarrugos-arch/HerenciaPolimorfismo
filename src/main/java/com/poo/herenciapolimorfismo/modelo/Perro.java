@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.poo.herenciapolimorfismo.modelo;
 
 /**
@@ -10,18 +6,34 @@ package com.poo.herenciapolimorfismo.modelo;
  */
 public class Perro extends Animal {
 
-    public Perro(String nombre) {
+    private int edad;
+    private String raza;
+
+    // Constructor completo: lo necesita PerroGrande (super(nombre, edad, raza))
+    public Perro(String nombre, int edad, String raza) {
         super(nombre);
+        this.edad = edad;
+        this.raza = raza;
+    }
+
+    public Perro(String nombre) {
+        this(nombre, 0, "Mestiza");
     }
 
     public Perro() {
-        super("Pongo");
+        this("Pongo", 3, "Dálmata");
     }
- 
-    
-  @Override
-  public void hacerSonido() {
-    System.out.println(super.getNombre()+ " hace Guau guau!");
-  }
-}
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    @Override
+    public void hacerSonido() {
+        System.out.println(super.getNombre() + " hace Guau guau!");
+    }
+}
