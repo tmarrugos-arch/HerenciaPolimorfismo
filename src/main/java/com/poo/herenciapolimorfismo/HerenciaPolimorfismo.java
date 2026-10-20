@@ -28,7 +28,7 @@ public class HerenciaPolimorfismo {
             new Perro("Rex"),
             new Gato("Silvestre"),
             new Pajaro("Piolín"),
-            new Pez("Nemo"),
+            new Pez("DORY"),
             new PerroGrande("Zeus", 5, "Gran Danés", 70),
             new Animal("Genérico")
         };
